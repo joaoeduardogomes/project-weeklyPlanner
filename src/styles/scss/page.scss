@@ -10,11 +10,15 @@ body {
 }
 
 #planner {
-    max-width: 900px;
+    max-width: 960px;
     margin: auto;
-    padding: 2rem;
+    padding: 2.8rem;
     background-color: $light-orange;
     border: 24px solid $dark-brown;
+}
+
+img.icon {
+    position: relative;
 }
 
 header {
@@ -29,6 +33,13 @@ header {
         font-size: 3rem;
         letter-spacing: .5rem;
         font-style: italic;
+    }
+
+    img#mugHeartIcon {
+        width: 100px;
+        right: 126px;
+        bottom: 50px;
+        transform: rotate(15deg);
     }
 
     aside {
@@ -61,15 +72,20 @@ section#notes-section {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 
-    #sunday, #thursday, #notes {
+    #sunday,
+    #thursday,
+    #notes {
         background-color: $light-brown;
     }
 
-    #monday, #friday, #saturday {
+    #monday,
+    #friday,
+    #saturday {
         background-color: $medium-brown;
     }
 
-    #tuesday, #wednesday {
+    #tuesday,
+    #wednesday {
         background-color: $medium-orange;
     }
 }
@@ -96,12 +112,65 @@ div.notes-block {
         border-radius: 24px;
     }
 
+    ul {
+        display: block;
+        width: 100%;
+        max-width: 220px;
+        min-height: 50%;
+        max-height: fit-content;
+        caret-color: $white;
+        margin-left: 1rem;
+        word-wrap: normal;
+
+        div {
+            list-style: none;
+            width: 90%;
+            height: 10%;
+
+            &::before {
+                background-image: url('../../img/coffee-bean.png');
+                background-size: 2.5rem;
+            }
+        }
+    }
+
+    img#coffeeCupIcon {
+        width: 60px;
+        top: 2%;
+    }
+
+    img#coffeeTravelIcon {
+        width: 90px;
+        left: 85%;
+        top: -25%;
+    }
+
+    img#coffeeBrewIcon {
+        width: 90px;
+        transform: rotateY(180deg);
+        right: 35%;
+        top: -35%;
+        z-index: 0;
+    }
 }
 
 div#notes {
     grid-column: 2 / span 2;
-    
+
     h2 {
         margin-left: 1.4rem;
+    }
+
+    p {
+        width: 100%;
+        height: 70%;
+        caret-color: $white;
+    }
+
+    img#coffeeBeansIcon {
+        width: 200px;
+        left: 74%;
+        top: -20%;
+        z-index: 2;
     }
 }

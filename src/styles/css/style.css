@@ -12,11 +12,15 @@ body {
 }
 
 #planner {
-  max-width: 900px;
+  max-width: 960px;
   margin: auto;
-  padding: 2rem;
+  padding: 2.8rem;
   background-color: #F2BC57;
   border: 24px solid #260B01;
+}
+
+img.icon {
+  position: relative;
 }
 
 header {
@@ -31,6 +35,12 @@ header h1 {
   font-size: 3rem;
   letter-spacing: 0.5rem;
   font-style: italic;
+}
+header img#mugHeartIcon {
+  width: 100px;
+  right: 126px;
+  bottom: 50px;
+  transform: rotate(15deg);
 }
 header aside {
   flex-shrink: 1;
@@ -58,13 +68,18 @@ section#notes-section {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-section#notes-section #sunday, section#notes-section #thursday, section#notes-section #notes {
+section#notes-section #sunday,
+section#notes-section #thursday,
+section#notes-section #notes {
   background-color: #A67244;
 }
-section#notes-section #monday, section#notes-section #friday, section#notes-section #saturday {
+section#notes-section #monday,
+section#notes-section #friday,
+section#notes-section #saturday {
   background-color: #733410;
 }
-section#notes-section #tuesday, section#notes-section #wednesday {
+section#notes-section #tuesday,
+section#notes-section #wednesday {
   background-color: #D99748;
 }
 
@@ -87,12 +102,58 @@ div.notes-block h2 {
   padding: 0.5rem;
   border-radius: 24px;
 }
+div.notes-block ul {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  min-height: 50%;
+  max-height: fit-content;
+  caret-color: #fff;
+  margin-left: 1rem;
+  word-wrap: normal;
+}
+div.notes-block ul div {
+  list-style: none;
+  width: 90%;
+  height: 10%;
+}
+div.notes-block ul div::before {
+  background-image: url("../../img/coffee-bean.png");
+  background-size: 2.5rem;
+}
+div.notes-block img#coffeeCupIcon {
+  width: 60px;
+  top: 2%;
+}
+div.notes-block img#coffeeTravelIcon {
+  width: 90px;
+  left: 85%;
+  top: -25%;
+}
+div.notes-block img#coffeeBrewIcon {
+  width: 90px;
+  transform: rotateY(180deg);
+  right: 35%;
+  top: -35%;
+  z-index: 0;
+}
 
 div#notes {
   grid-column: 2/span 2;
 }
 div#notes h2 {
   margin-left: 1.4rem;
+}
+div#notes p {
+  width: 100%;
+  height: 70%;
+  caret-color: #fff;
+}
+div#notes img#coffeeBeansIcon {
+  width: 200px;
+  left: 74%;
+  top: -20%;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=style.css.map */
