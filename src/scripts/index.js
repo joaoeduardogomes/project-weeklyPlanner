@@ -14,3 +14,9 @@ ulItems.forEach((ulItem) => {
         }
     })
 })
+
+
+const Btn = document.querySelector('#btn');
+Btn.addEventListener('click', () => {
+    window.print();
+});

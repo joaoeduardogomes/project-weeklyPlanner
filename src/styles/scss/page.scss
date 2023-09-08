@@ -121,15 +121,18 @@ div.notes-block {
         max-height: fit-content;
         caret-color: $white;
         margin-right: 1rem;
-        word-wrap: normal;
+        word-wrap: break-word;
+        line-break: auto;
         position: relative;
         z-index: 0;
         // border: 1px solid white;
 
         li {
             list-style: '';
-            width: 90%;
+            width: 100%;
             height: 10%;
+            line-break: auto;
+            word-wrap: break-word;
 
             &:before {
                 background-image: url('../../img/coffee-bean.png');
@@ -197,4 +200,29 @@ button#btn {
     cursor: pointer;
     border-radius: 16px;
     border: 1px solid transparent;
+}
+
+@media print {
+    * {
+        -webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */
+        color-adjust: exact !important;                 /* Firefox 48 – 96 */
+        print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
+    }
+
+    // body {
+    // zoom: 35%;
+    // }
+    main {
+        margin: auto;
+        height: 100%;
+    }
+
+    button#btn {
+        display: none;
+    }
+
+    @page {
+        size: auto;
+        margin: 0;
+    }
 }
