@@ -24,6 +24,7 @@ img.icon {
 
 header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1.5rem;
@@ -169,7 +170,7 @@ div.notes-block {
 }
 
 div#notes {
-    grid-column: 2 / span 2;
+    grid-column: span 2;
 
     h2 {
         margin-left: 1.4rem;
@@ -200,6 +201,44 @@ button#btn {
     cursor: pointer;
     border-radius: 16px;
     border: 1px solid transparent;
+}
+
+@media screen and (max-width: 855px) {
+    section#notes-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    img#coffeeCupIcon {
+        width: 50px !important;
+    }
+
+    img#coffeeTravelIcon {
+        width: 70px !important;
+        top: -45% !important;
+    }
+
+    img#coffeeBrewIcon {
+        max-width: 70px !important;
+        left: -25%;
+        top: -35%;
+    }
+
+    img#coffeeBeansIcon {
+        width: 150px;
+        left: 74%;
+        top: -20%;
+        z-index: 2;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    section#notes-section {
+        grid-template-columns: 1fr;
+    }
+
+    div#notes {
+        grid-column: span 1;
+    }
 }
 
 @media print {
