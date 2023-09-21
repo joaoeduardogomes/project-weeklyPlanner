@@ -8,7 +8,7 @@ const ulItems = document.querySelectorAll('ul');
 ulItems.forEach((ulItem) => {
     ulItem.contentEditable = true;
 
-    ulItem.addEventListener('click', () => {
+    ulItem.addEventListener('focus', () => {
         if (ulItem.innerHTML.length === 0) {
             createNewLi(ulItem);
         }
