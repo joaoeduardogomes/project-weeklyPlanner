@@ -103,6 +103,7 @@ div.notes-block {
   flex-basis: 30%;
   padding: 1rem;
   border-radius: 50px;
+  break-after: auto;
   min-height: 300px;
   max-height: fit-content;
 }
@@ -259,18 +260,17 @@ button#btn {
   * {
     -webkit-print-color-adjust: exact !important;
     /* Chrome, Safari 6 – 15.3, Edge */
-    color-adjust: exact !important;
     /* Firefox 48 – 96 */
     print-color-adjust: exact !important;
     /* Firefox 97+, Safari 15.4+ */
     overflow: visible;
   }
   body {
-    zoom: 85%;
-    background-color: #260B01;
+    width: 1200px;
   }
   main {
     margin: auto;
+    width: 100%;
     height: 100%;
   }
   img#mugHeartIcon {
@@ -284,7 +284,9 @@ button#btn {
   @page {
     size: A4;
     margin: 0;
-    height: 70vh;
+    width: 100%;
+    height: 100%;
+    break-after: always;
   }
 }
 
